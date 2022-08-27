@@ -1,43 +1,33 @@
--- [bufnum, lnum, col, off]
-local mountains = {"ellen", "pico", "killington", "buck", "snake"}
+-- many of Vermont's mountains. partially sourced from https://en.wikipedia.org/wiki/List_of_mountains_of_Vermont
+local mountains = {
+  -- favorites
+  "Abraham", "Buck", "Ellen", "Equinox", "Killington", "Lincoln", "Mansfield", "Moosalamoo", "Philo", "Pico", "Pisgah", "Snake", "Tabor",
+  -- others
+  "Aeolus", "Anthony", "Ascutney", "BabyStark", "Baker", "Bald", "Barton", "Battell", "Bean", "Bear", "BearHead", "Belvidere", "BigJay", "Bloodroot", "Bolton", "Bone", "Bowen", "Boyce", "BreadLoaf", "Bromley", "Brousseau", "Buchanan", "Buckball", "Buffalo", "Bull", "Burke", "Burnt", "BurntRock", "CapeLookoff", "Carmel", "Central", "CherryKnoll", "Clark", "Cleveland", "ColdHollow", "Consultation", "Deer", "DeerLeap", "Dewey", "DomeysDome", "Dorset", "Drew", "East", "EastHaven", "Elmore", "Ephraim", "EthanAllen", "Farr", "Fletcher", "Gile", "Gilpin", "Glastenbury", "Glebe", "Gore", "Grant", "Grass", "Hardwood", "Haystack", "Hogback", "Hooker", "Hor", "Hunger", "IraAllen", "JacksonGore", "Jay", "Kirby", "Laraway", "LittleDeer", "LittleJay", "LittleKillington", "Ludlow", "Madonna", "Marshfield", "Mayo", "Mays", "Mendon", "MollyStark", "Monadnock", "Morse", "NancyHanks", "Norris", "NorthJay", "NorthStratton", "Okemo", "Olga", "Owlshead", "Pease", "Peru", "Prospect", "Putnam", "RamsHead", "Ricker", "Roosevelt", "Seneca", "Shrewsbury", "Signal", "Skye", "Snow", "Snowden", "SouthBuckball", "SplitRock", "Spruce", "Stannard", "Stark", "Sterling", "Stimson", "Stratton", "Styles", "Sugarloaf", "Sunrise", "TheDome", "TheFoxCobble", "Tillotson", "Tiny", "Tom", "Umpire", "Vista", "Wheeler", "WhiteRocks", "Whiteface", "Wilson", "Woodbury", "Woodward", "Worcester"
+}
 
-local sel_start = vim.fn.getpos("'<")
-local sel_end = vim.fn.getpos("'>")
+function insertVermontMountains()
+  local sel_start = vim.fn.getpos("'<")
+  local sel_end = vim.fn.getpos("'>")
 
-local start_line = sel_start[2]
-local end_line = sel_end[2]
-local start_col = sel_start[3]
-local end_col = sel_end[3]
+  local start_row = sel_start[2] -1
+  local end_row = sel_end[2] - 1
+  local col = sel_start[3] -1
 
-print("start line", start_line)
-print("end line", end_line)
-print("start col", start_col)
-print("end col", end_col)
+  if end_row - start_row + 1 > #mountains then
+    print("VTMT Error: selection has more lines than placeholder words")
+    return
+  end
 
-vim.api.nvim_buf_set_text(0, start_line-1, start_col-1, start_line-1, start_col-1, {'pisgah'})
+  local idx = 1
+  for row=start_row,end_row do
+    vim.api.nvim_buf_set_text(0, row, col, row, col, {mountains[idx]})
+    idx = idx + 1
+  end
+end
 
--- nvim_buf_set_text({buffer}, {start_row}, {start_col}, {end_row}, {end_col},
---                   {replacement})
---                 Sets (replaces) a range in the buffer
+-- TODO add README.md
+-- TODO add a flag for casing. use string.upper and string.lower
 
---                 This is recommended over nvim_buf_set_lines when only
---                 modifying parts of a line, as extmarks will be preserved on
---                 non-modified parts of the touched lines.
-
---                 Indexing is zero-based and end-exclusive.
-
---                 To insert text at a given index, set `start` and `end` ranges
---                 to the same index. To delete a range, set `replacement` to an
---                 array containing an empty string, or simply an empty array.
-
---                 Prefer nvim_buf_set_lines when adding or deleting entire lines
---                 only.
-
---                 Parameters: ~
---                     {buffer}        Buffer handle, or 0 for current buffer
---                     {start_row}     First line index
---                     {start_column}  First column
---                     {end_row}       Last line index
---                     {end_column}    Last column
---                     {replacement}   Array of lines to use as replacement
-
+-- TODO remove when we publish. just for testing
+insertVermontMountains()
