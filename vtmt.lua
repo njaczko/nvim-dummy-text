@@ -12,7 +12,7 @@ function insertVermontMountains()
 
   local start_row = sel_start[2] -1
   local end_row = sel_end[2] - 1
-  local col = sel_start[3] -1
+  local col = sel_start[3] - 1
 
   if end_row - start_row + 1 > #mountains then
     print("VTMT Error: selection has more lines than placeholder words")
