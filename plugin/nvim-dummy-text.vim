@@ -3,5 +3,4 @@ if exists("g:loaded_nvim_dummy_text")
 endif
 let g:loaded_nvim_dummy_text = 1
 
-lua require("nvim-dummy-text")
-command! -range Vtmt lua insertVermontMountains()
+command! -range Vtmt lua require("nvim-dummy-text").insertVermontMountains()
