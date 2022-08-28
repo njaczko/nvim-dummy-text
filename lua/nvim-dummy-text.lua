@@ -15,7 +15,7 @@ function insertVermontMountains()
   local col = sel_start[3] - 1
 
   if end_row - start_row + 1 > #mountains then
-    print("VTMT Error: selection has more lines than placeholder words")
+    print("nvim-dummy-text ERROR: selection has more lines than dummy words")
     return
   end
 
@@ -26,8 +26,4 @@ function insertVermontMountains()
   end
 end
 
--- TODO add README.md
 -- TODO add a flag for casing. use string.upper and string.lower
-
--- TODO remove when we publish. just for testing
-insertVermontMountains()
