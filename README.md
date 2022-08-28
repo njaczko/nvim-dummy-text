@@ -2,29 +2,26 @@
 
 This plugin inserts the names of mountains in Vermont, U.S.A. for use as dummy
 text. The names have been stripped of words like `Mountain`, `Mount`, and
-`Peak`. Names with multiple words have been reduced to a singel word with
+`Peak`. Names with multiple words have been reduced to a single word with
 concatenation.
 
-Most of the names were scraped from [Wikipedia](https://en.wikipedia.org/wiki/List_of_mountains_of_Vermont),
-but I've added some of my other favorites.
+Most of the names were scraped from [Wikipedia](https://en.wikipedia.org/wiki/List_of_mountains_of_Vermont).
 
 ## Usage
 
-TODO.
+Make a visual selection. Then, call the `Vtmt` command (`:Vtmt`). In visual line
+mode, the plugin will insert the names of Vermont mountains at the begging of
+each selected line. In visual or visual block mode, the text will be inserted
+along the left side of the selection.
 
 ## Installation
 
-Install with your favorite plugin manager. For example, with VimPlug:
+Install with your favorite plugin manager. For example, with VimPlug...
 
-Place this in your `.vimrc`:
+Place this in your `init.vim`:
 
 ```
 Plug 'njaczko/nvim-dummy-text'
 ```
 
-… then run the following in Vim:
-
-```
-:source %
-:PlugInstall
-```
+Then, source `init.vim` and run `:PlugInstall`.
