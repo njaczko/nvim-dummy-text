@@ -5,7 +5,25 @@ local mountains = {
   -- favorites
   "Abraham", "Buck", "Ellen", "Equinox", "Killington", "Lincoln", "Mansfield", "Moosalamoo", "Philo", "Pico", "Pisgah", "Snake", "Tabor",
   -- others
-  "Aeolus", "Anthony", "Ascutney", "BabyStark", "Baker", "Bald", "Barton", "Battell", "Bean", "Bear", "BearHead", "Belvidere", "BigJay", "Bloodroot", "Bolton", "Bone", "Bowen", "Boyce", "BreadLoaf", "Bromley", "Brousseau", "Buchanan", "Buckball", "Buffalo", "Bull", "Burke", "Burnt", "BurntRock", "CapeLookoff", "Carmel", "Central", "CherryKnoll", "Clark", "Cleveland", "ColdHollow", "Consultation", "Deer", "DeerLeap", "Dewey", "DomeysDome", "Dorset", "Drew", "East", "EastHaven", "Elmore", "Ephraim", "EthanAllen", "Farr", "Fletcher", "Gile", "Gilpin", "Glastenbury", "Glebe", "Gore", "Grant", "Grass", "Hardwood", "Haystack", "Hogback", "Hooker", "Hor", "Hunger", "IraAllen", "JacksonGore", "Jay", "Kirby", "Laraway", "LittleDeer", "LittleJay", "LittleKillington", "Ludlow", "Madonna", "Marshfield", "Mayo", "Mays", "Mendon", "MollyStark", "Monadnock", "Morse", "NancyHanks", "Norris", "NorthJay", "NorthStratton", "Okemo", "Olga", "Owlshead", "Pease", "Peru", "Prospect", "Putnam", "RamsHead", "Ricker", "Roosevelt", "Seneca", "Shrewsbury", "Signal", "Skye", "Snow", "Snowden", "SouthBuckball", "SplitRock", "Spruce", "Stannard", "Stark", "Sterling", "Stimson", "Stratton", "Styles", "Sugarloaf", "Sunrise", "TheDome", "TheFoxCobble", "Tillotson", "Tiny", "Tom", "Umpire", "Vista", "Wheeler", "WhiteRocks", "Whiteface", "Wilson", "Woodbury", "Woodward", "Worcester"
+  "Aeolus", "Anthony", "Ascutney", "BabyStark", "Baker", "Bald", "Barton",
+  "Battell", "Bean", "Bear", "BearHead", "Belvidere", "BigJay", "Bloodroot",
+  "Bolton", "Bone", "Bowen", "Boyce", "BreadLoaf", "Bromley", "Brousseau",
+  "Buchanan", "Buckball", "Buffalo", "Bull", "Burke", "Burnt", "BurntRock",
+  "CapeLookoff", "Carmel", "Central", "CherryKnoll", "Clark", "Cleveland",
+  "ColdHollow", "Consultation", "Deer", "DeerLeap", "Dewey", "DomeysDome",
+  "Dorset", "Drew", "East", "EastHaven", "Elmore", "Ephraim", "EthanAllen",
+  "Farr", "Fletcher", "Gile", "Gilpin", "Glastenbury", "Glebe", "Gore",
+  "Grant", "Grass", "Hardwood", "Haystack", "Hogback", "Hooker", "Hor",
+  "Hunger", "IraAllen", "JacksonGore", "Jay", "Kirby", "Laraway", "LittleDeer",
+  "LittleJay", "LittleKillington", "Ludlow", "Madonna", "Marshfield", "Mayo",
+  "Mays", "Mendon", "MollyStark", "Monadnock", "Morse", "NancyHanks", "Norris",
+  "NorthJay", "NorthStratton", "Okemo", "Olga", "Owlshead", "Pease", "Peru",
+  "Prospect", "Putnam", "RamsHead", "Ricker", "Roosevelt", "Seneca",
+  "Shrewsbury", "Signal", "Skye", "Snow", "Snowden", "SouthBuckball",
+  "SplitRock", "Spruce", "Stannard", "Stark", "Sterling", "Stimson",
+  "Stratton", "Styles", "Sugarloaf", "Sunrise", "TheDome", "TheFoxCobble",
+  "Tillotson", "Tiny", "Tom", "Umpire", "Vista", "Wheeler", "WhiteRocks",
+  "Whiteface", "Wilson", "Woodbury", "Woodward", "Worcester"
 }
 
 -- M.insertVermontMountains inserts words from the table above along the left
