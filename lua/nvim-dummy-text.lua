@@ -42,10 +42,17 @@ function M.insertVermontMountains()
   end
 
   local idx = 1
+  -- TODO fix start_col out of range error when Vtmt is called without any visual selections
   for row=start_row,end_row do
     vim.api.nvim_buf_set_text(0, row, col, row, col, { mountains[idx] })
     idx = idx + 1
   end
+end
+
+-- M.fillVermontMountains inserts a line for each word in the mountains table.
+function M.fillVermontMountains()
+  currentLineNum = unpack(vim.api.nvim_win_get_cursor(0))
+  vim.api.nvim_buf_set_lines(0, currentLineNum, currentLineNum, true, mountains)
 end
 
 return M

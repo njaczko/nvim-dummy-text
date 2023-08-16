@@ -4,3 +4,4 @@ endif
 let g:loaded_nvim_dummy_text = 1
 
 command! -range Vtmt lua require("nvim-dummy-text").insertVermontMountains()
+command! -range VtmtFill lua require("nvim-dummy-text").fillVermontMountains()
