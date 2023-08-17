@@ -9,12 +9,13 @@ Most of the names were scraped from [Wikipedia](https://en.wikipedia.org/wiki/Li
 
 ## Usage
 
-TODO update this documentation
-
 Make a visual selection. Then, call the `Vtmt` command (`:Vtmt`). In visual line
 mode, the plugin will insert the names of Vermont mountains at the begging of
 each selected line. In visual or visual block mode, the text will be inserted
 along the left side of the selection.
+
+`VtmtFill` will insert all of the mountain names on new lines. It's great for
+filling up an empty file.
 
 ## Installation
 
