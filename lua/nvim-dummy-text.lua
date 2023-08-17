@@ -41,8 +41,12 @@ function M.insertVermontMountains()
     return
   end
 
+  if start_row < 0 or end_row < 0 or col < 0 then
+    -- no visual selection. nvim_buf_set_text does not accept negative indices.
+    return
+  end
+
   local idx = 1
-  -- TODO fix start_col out of range error when Vtmt is called without any visual selections
   for row=start_row,end_row do
     vim.api.nvim_buf_set_text(0, row, col, row, col, { mountains[idx] })
     idx = idx + 1
